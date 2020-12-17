@@ -12,3 +12,6 @@ public class HomeController {
         return "My Cool API";
     }
 }
+
+// inbound 8080
+// outbound
