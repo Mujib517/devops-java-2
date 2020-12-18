@@ -8,6 +8,7 @@ phases:
     commands:
       - echo 'install phase is staring'
       - mvn install
+      - mvn test
       - echo 'install phase finished'
   build:
     commands:
