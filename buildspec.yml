@@ -1,6 +1,6 @@
 version: 0.2
 phases:
-  prebuild:
+  pre_build:
     commands:
       - echo 'pre build is staring'
       - mvn clean
@@ -13,7 +13,7 @@ phases:
     commands:
       - mvn package
 
-  artifacts:
+artifacts:
     name: api.jar
     files:
       - target/api-1.0.0.jar
