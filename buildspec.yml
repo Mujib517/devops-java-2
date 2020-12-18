@@ -1,0 +1,19 @@
+version: 0.2
+phases:
+  prebuild:
+    commands:
+      - echo 'pre build is staring'
+      - mvn clean
+  install:
+    commands:
+      - echo 'install phase is staring'
+      - mvn install
+      - echo 'install phase finished'
+  build:
+    commands:
+      - mvn package
+
+  artifacts:
+    name: api.jar
+    files:
+      - target/api-1.0.0.jar
