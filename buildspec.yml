@@ -15,7 +15,7 @@ phases:
 
 artifacts:
     discard-paths: yes
-    name: api.jar
+    name: api-$(date + %Y-%m-%d).jar
     files:
       - target/api-1.0.0.jar
 
