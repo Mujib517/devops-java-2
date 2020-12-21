@@ -19,6 +19,8 @@ artifacts:
     name: api-$(date +%Y-%m-%d)
     files:
       - target/api-1.0.0.jar
+      - scripts/*.sh
+      - appspec.yml
 
 cache:
   paths:

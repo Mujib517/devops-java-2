@@ -22,4 +22,12 @@ public class ApiApplication {
 	// location
     // rice
     // spices
+//
+// service agent (ec2)
+// BeforeInstall
+// ApplicationStart
+// ApplicationStop
+// java
+// db
+
 
