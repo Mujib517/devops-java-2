@@ -3,8 +3,7 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/
-
+    destination: /home/ubuntu
 hooks:
   BeforeInstall:
   AfterInstall:
@@ -14,7 +13,10 @@ hooks:
       timeout: 30
       runas: root
 
-#  ApplicationStop:
-#    - location: stop-server.sh
-#      timeout: 30
-#      runas: root
+  ApplicationStop:
+    - location: stop-server.sh
+      timeout: 30
+      runas: root
+
+
+
