@@ -1,0 +1,12 @@
+[Unit]
+Description= Java Spring api as a Service
+
+[Service]
+User=ubuntu
+Group=ubuntu
+Type=simple
+ExecStart=/usr/bin/java -jar api-1.0.0.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

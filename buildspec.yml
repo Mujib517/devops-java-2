@@ -21,6 +21,7 @@ artifacts:
       - target/api-1.0.0.jar
       - scripts/*.sh
       - appspec.yml
+      - scripts/api.service
 
 cache:
   paths:
