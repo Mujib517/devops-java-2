@@ -5,7 +5,7 @@ Description= Java Spring api as a Service
 User=ubuntu
 Group=ubuntu
 Type=simple
-ExecStart=/usr/bin/java -jar api-1.0.0.jar
+ExecStart=java -jar /home/ubuntu/api-1.0.0.jar
 SuccessExitStatus=143
 
 [Install]
