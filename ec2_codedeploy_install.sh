@@ -7,5 +7,6 @@ dpkg-deb -R codedeploy-agent_1.0-1.1597_all.deb codedeploy-agent_1.0-1.1597_ubun
 sed 's/2.0/2.7/' -i ./codedeploy-agent_1.0-1.1597_ubuntu20/DEBIAN/control
 dpkg-deb -b codedeploy-agent_1.0-1.1597_ubuntu20
 dpkg -i codedeploy-agent_1.0-1.1597_ubuntu20.deb
-systemctl start codedeploy-agent
+
 systemctl enable codedeploy-agent
+sudo systemctl restart codedeploy-agent.service
