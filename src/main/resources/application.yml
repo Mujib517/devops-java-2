@@ -9,7 +9,6 @@ spring:
         default-schema: public
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password:
-    driverClassName: org.postgresql.Driver
+    url: jdbc-secretsmanager:postgresql://testdb.cbw1gbfiqm3p.us-east-1.rds.amazonaws.com:5432/postgres
+    username: dev/db/secret
+    driverClassName: com.amazonaws.secretsmanager.sql.AWSSecretsManagerPostgreSQLDriver
