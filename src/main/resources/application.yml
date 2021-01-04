@@ -1,2 +1,15 @@
 server:
   port: 5000
+
+spring:
+  jpa:
+    database: postgresql
+    properties:
+      hibernet:
+        default-schema: public
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password:
+    driverClassName: org.postgresql.Driver
