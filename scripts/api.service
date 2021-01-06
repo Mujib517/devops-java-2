@@ -4,7 +4,7 @@ Description= Java Spring api as a Service
 [Service]
 User=ec2-user
 WorkingDirectory=/home/ec2-user
-ExecStart=api-1.0.0.jar
+ExecStart=/usr/bin/java -jar api-1.0.0.jar
 SuccessExitStatus=143
 
 [Install]
