@@ -2,10 +2,10 @@
 Description= Java Spring api as a Service
 
 [Service]
-User=ubuntu
-Group=ubuntu
+User=ec2-user
+Group=ec2-user
 Type=simple
-ExecStart=java -jar /home/ubuntu/api-1.0.0.jar
+ExecStart=java -jar /home/ec2-user/api-1.0.0.jar
 SuccessExitStatus=143
 
 [Install]

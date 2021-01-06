@@ -1,0 +1,26 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo 'pre build is staring'
+      - mvn clean
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 000967136778.dkr.ecr.us-east-1.amazonaws.com
+
+  install:
+    commands:
+      - echo 'install phase is staring'
+      - mvn install
+      - mvn test
+      - echo 'install phase finished'
+  build:
+    commands:
+      - mvn package
+      - docker build -t spring-api .
+      - docker tag spring-api:latest 000967136778.dkr.ecr.us-east-1.amazonaws.com/spring-api:latest
+
+  post_build:
+    commands:
+      - docker push 000967136778.dkr.ecr.us-east-1.amazonaws.com/spring-api:latest
+cache:
+  paths:
+    - '/root/.m2/**/*'

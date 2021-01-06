@@ -1,4 +1,4 @@
-sudo cp /home/ubuntu/api.service /etc/systemd/system/
+sudo cp /home/ec2-user/api.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
 
